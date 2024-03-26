@@ -93,7 +93,7 @@ input[type=button]:hover {
 }
 
 .search-dialog {
-    visibility: hidden;
+    display: none;
     background-color: #fff;
     margin-top: 8px;
     margin-left: 11px;
@@ -101,6 +101,9 @@ input[type=button]:hover {
     width: 350px;
 }
 
+.search-dialog.visible {
+    display: block;
+}
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Component                                            */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */

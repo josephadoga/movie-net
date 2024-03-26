@@ -17,3 +17,4 @@ function select(selector) {
 }
 
 const searchDialog = select('.search-dialog');
+const selectedMovie = select('.selected-movie');
