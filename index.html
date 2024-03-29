@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
         <link rel="stylesheet" type="text/css" href="./assets/style/index.css" media="all">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,500;6..12,600;6..12,700&family=Source+Code+Pro:wght@400;500;600;700&display=swap">
-        <script src="./assets/script/app.js" defer></script>
+        <script src="./assets/script/app.js" type="module"></script>
     </head>
     <body>
         <main>
@@ -25,9 +25,12 @@
                         <input type="text" class="input" placeholder="Search Movie">
                         <input type="button" class="create" value="Search">
                     </form>
-                    <div class="search-dialog"></div>
+                    <div class="search-dialog">
+                        <ul class="search-dialog-list">
+                        </ul>
+                    </div>
                     <div class="selected-movie">
-
+                        <p>The Movie</p>
                     </div>
                 </div>
             </div>

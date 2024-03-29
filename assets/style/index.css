@@ -99,11 +99,46 @@ input[type=button]:hover {
     margin-left: 11px;
     border-radius: 6px;
     width: 350px;
+    position: fixed;
+}
+
+.search-dialog ul {
+    text-decoration: none;
+    text-align: left;
+}
+
+.search-dialog li {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.search-dialog li:first-child {
+    border-top-left-radius: 6px; 
+    border-top-right-radius: 6px;
+}
+
+.search-dialog li:last-child {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.search-dialog li:hover {
+    background-color: var(--app-blue-hover);
 }
 
 .search-dialog.visible {
     display: block;
 }
+
+.selected-movie {
+    margin-top: 20px;
+    background-color: #000;
+    height: 300px;
+}
+
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Component                                            */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
