@@ -113,6 +113,9 @@ input[type=button]:hover {
     padding-left: 10px;
     cursor: pointer;
     transition: all 0.25s ease-in-out;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .search-dialog li:first-child {
@@ -127,6 +130,10 @@ input[type=button]:hover {
 
 .search-dialog li:hover {
     background-color: var(--app-blue-hover);
+}
+
+.search-dialog .notfound:hover {
+    background-color: #fff;
 }
 
 .search-dialog.visible {
