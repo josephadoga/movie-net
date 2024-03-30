@@ -20,7 +20,6 @@ const input = select('.input');
 const searchButton = select('.search-movie');
 const searchDialog = select('.search-dialog');
 const searchDialogList = select('.search-dialog-list');
-
 const selectedMovie = select('.selected-movie');
 
 const matchesFound = [];
@@ -66,4 +65,8 @@ function selection() {
 listen('input', input, function() {
     search();
     selection();
+});
+
+listen('click', searchButton, function() {
+    selectedMovie.classList.add('visible');
 });

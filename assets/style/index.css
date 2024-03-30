@@ -13,7 +13,6 @@
 body {
     font-family: 'Nunito Sans', 'Open Sans', Arial, sans-serif;
     background-color: var(--app-background-color);
-    position: relative; 
 }
 
 .container { 
@@ -21,7 +20,7 @@ body {
     margin-inline: auto;
 }
 
-h1, p, i {
+h1, h2, p, i {
     color: #fff;
 }
 
@@ -32,12 +31,26 @@ h1, p, i {
     place-items: center;
 }
 
+.center-b {
+    min-width: 100%;
+    display: grid;
+    place-items: center;
+}
+
 .flex {
     display: flex;
 }
 
+.space-between {
+    justify-content: space-between;
+}
+
 .gap-20 {
-    gap: 20;
+    gap: 20px;
+}
+
+.gap-10 {
+    gap: 10px;
 }
 
 
@@ -45,9 +58,14 @@ h1, p, i {
 /*  Main                                                 */
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+.search-place {
+    position: relative;
+}
+
 h1 {
     text-transform: uppercase;
 }
+
 
 form {
     margin-top: 20px;
@@ -99,7 +117,7 @@ input[type=button]:hover {
     margin-left: 11px;
     border-radius: 6px;
     width: 350px;
-    position: fixed;
+    position: absolute;
 }
 
 .search-dialog ul {
@@ -141,10 +159,53 @@ input[type=button]:hover {
 }
 
 .selected-movie {
+    visibility: hidden;
     margin-top: 20px;
-    background-color: #000;
-    height: 300px;
+    padding: 10px;
+    width: 700px;
+    text-align: left;
+    transform: translateY(-10px);
+    transition: all 0.25s ease-in-out;
 }
+
+.selected-movie.visible {
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+.movie-content {
+    padding: 40px 0;
+}
+
+.movie-image img {
+    height: 320px;
+}
+
+.movie-details {
+    width: 130px;
+}
+
+.circle {
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+    background-color: #fff;
+    margin: 8px 0;
+}
+
+.selected-movie article {
+    margin-top: 20px;
+    width: 400px;
+}
+
+.genre p {
+    color: #757575;
+    background-color: rgb(255 255 255 / 0.05);
+    border-radius: 50px;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 /*  Component                                            */
