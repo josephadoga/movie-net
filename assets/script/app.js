@@ -62,11 +62,46 @@ function selection() {
 }
 
 
+function displayMovie() {
+    for(let i = 0; i < movies.length; i++) {
+        if (movies[i].title === input.value) {
+            console.log(movies[i].title)
+            selectedMovie.classList.add('visible');
+            selectedMovie.innerHTML = `
+            <div class="movie-image">
+                <figure>
+                    <img src="${movies[i].poster}">
+                </figure>
+            </div>
+            <div class="movie-content">
+                <h2>${movies[i].title}</h2>
+                <div class="movie-details flex space-between">
+                    <p>${movies[i].year}</p>
+                    <div class="circle"></div>
+                    <p>${movies[i].runningTime}</p>
+                </div>
+                <article>
+                    <p>
+                        ${movies[i].description}
+                    </p>
+                </article>
+                <div class="genre flex gap-10">
+                    <p>Action</p>
+                    <p>Adventure</p>
+                    <p>Fantasy</p>
+                </div>
+            </div>
+            `
+        }
+    }
+}
+
+
 listen('input', input, function() {
     search();
     selection();
 });
 
 listen('click', searchButton, function() {
-    selectedMovie.classList.add('visible');
+    displayMovie()
 });

@@ -118,6 +118,7 @@ input[type=button]:hover {
     border-radius: 6px;
     width: 350px;
     position: absolute;
+    z-index: 10000;
 }
 
 .search-dialog ul {
@@ -162,6 +163,7 @@ input[type=button]:hover {
     visibility: hidden;
     margin-top: 20px;
     padding: 10px;
+    height: 340px;
     width: 700px;
     text-align: left;
     transform: translateY(-10px);
