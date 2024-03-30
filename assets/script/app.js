@@ -67,6 +67,11 @@ function displayMovie() {
         if (movies[i].title === input.value) {
             console.log(movies[i].title)
             selectedMovie.classList.add('visible');
+            let moviegenre = ``;
+            for (let j = 0; j < movies[i].genre.length; j++) {
+                moviegenre += `<p>${movies[i].genre[j]}</p>`;
+            }
+
             selectedMovie.innerHTML = `
             <div class="movie-image">
                 <figure>
@@ -86,14 +91,16 @@ function displayMovie() {
                     </p>
                 </article>
                 <div class="genre flex gap-10">
-                    <p>Action</p>
-                    <p>Adventure</p>
-                    <p>Fantasy</p>
+                    ${moviegenre}
                 </div>
             </div>
             `
         }
     }
+}
+
+function clearInput() {
+    input.value = '';
 }
 
 
@@ -104,4 +111,5 @@ listen('input', input, function() {
 
 listen('click', searchButton, function() {
     displayMovie()
+    clearInput();
 });
